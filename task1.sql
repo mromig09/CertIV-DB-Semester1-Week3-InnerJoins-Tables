@@ -41,17 +41,28 @@ create table booking (
 );
 
 insert into tour (tourName, tourDescription) values
-('North', 'Tour of wineries and outlets of the Bendigo and Castlemaine region');
+('North', 'Tour of wineries and outlets of the Bendigo and Castlemaine region'),
+('South', 'Tour of whiskey distilleries'),
+('East', 'Tour of breweries'),
+('West', 'Pub Crawl');
 
 insert into client (clientId, surname, givenName, gender) values
 (1, 'Price', 'Taylor', 'M'),
+(2, 'Poppins', 'Mary', 'F'),
+(3, 'Williams', 'Robin', 'M'),
 (6345123, 'Romig', 'Mark', 'M');
 
 insert into event (tourName, eventYear, eventMonth, eventDay, eventFee) values
-('North', 2016, 'Jan', 9, 200);
+('North', 2016, 'Jan', 9, 200),
+('South', 2016, 'Feb', 14, 150),
+('East', 2016, 'Jan', 28, 185),
+('West', 2016, 'Mar', 3, 150);
 
 insert into booking (clientId, tourName, eventYear, eventMonth, eventDay, dateBooked, payment) values
-(1, 'North', 2016, 'Jan', 9, '2015-12-10', 200);
+(1, 'North', 2016, 'Jan', 9, '2015-12-10', 200),
+(2, 'South', 2016, 'Feb', 14, '2015-12-18', 150),
+(3, 'East', 2016, 'Jan', 28, '2015-12-29', 185),
+(6345123, 'West', 2016, 'Mar', 3, '2016-01-20', 150);
 
 -- SELECT table_catalog [database], table_schema [schema], table_name name, table_type type
 -- FROM INFORMATION_SCHEMA.TABLES
